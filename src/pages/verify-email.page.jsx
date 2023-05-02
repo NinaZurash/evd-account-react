@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import VerifyEmail from "../components/verify-email";
 
 export default function VerifyEmailPage() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [isVerified, setIsVerified] = useState(false);
   const [requestSent, setRequestSent] = useState(false);
   const location = useLocation();
@@ -36,6 +36,8 @@ export default function VerifyEmailPage() {
         }
       } catch (error) {
         console.error("Error:", error.message);
+        setIsVerified(false);
+        setIsLoading(false);
         // Handle the error, e.g., display an error message to the user
       }
     };

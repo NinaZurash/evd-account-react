@@ -134,6 +134,7 @@ export default function SignUp(props) {
           footerButtonLabel="Sign in"
           onClickHandler={props.onClickHandler}
           submitButtonLabel="Sign Up"
+          redirect="/"
           onSubmitHandler={() => {}}
         />
       </form>

@@ -63,6 +63,7 @@ export default function SignIn(props) {
         </div>
 
         <FormFooter
+          redirect="/sign-up"
           footerTitle="Don't have an account?"
           footerButtonLabel="Sign up"
           onClickHandler={props.onClickHandler}
